@@ -1,29 +1,25 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Home from "../src/component/Home";
-import Page1 from "../src/component/page1";
-import Page2 from "../src/component/page2";
+import Navbar from "./component/Navbar";
+import Home from "./page/Home";
+import Page1 from "./page/page1";
+import Page2 from "./page/page2";
+import Footer from "../src/component/Footer";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState(0);
   return (
-    <div className="App">
-      {page === 0 && (
-        <div>
-          <Home setPage={setPage} />
-        </div>
-      )}
-      {page === 1 && (
-        <div>
-          <Page1 setPage={setPage} />
-        </div>
-      )}
-      {page === 2 && (
-        <div>
-          <Page2 setPage={setPage} />
-        </div>
-      )}
-    </div>
+    <BrowserRouter>
+      <Navbar/>
+      <div className="contents">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/page1" index element={<Page1 />} />
+          <Route path="/page2" element={<Page2 />} />
+        </Routes>
+      </div>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

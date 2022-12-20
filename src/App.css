@@ -1,38 +1,226 @@
-.App {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /* color */
+  --primary-hue: 180;
+  --gray-hue: 240;
+  --color-primary: hsl(var(--primary-hue), 100%, 98%);
+  --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
+  --color-secondary: #f7d48c;
+  --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
+  --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
+  --color-gray-300: hsl(var(--gray-hue), 24%, 64%);
+  --color-gray-400: hsl(var(--gray-hue), 16%, 41%);
+  --color-gray-500: hsl(var(--gray-hue), 44%, 25%);
+  --color-gray-600: hsl(var(--gray-hue), 48%, 15%);
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+
+  --transition: all 500ms ease;
+}
+
+/* btn */
+.btn {
+  cursor: pointer;
+  color: var(--color-gray-500);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.9rem 2rem;
+  background: var(--color-primary);
+  border-radius: 1.2rem;
+  font-size: 16px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: 2px solid #f7d48c;
+}
+
+.btn:hover {
+  background: var(--color-secondary);
+  color: var(--color-gray-600);
+}
+
+.btn.lg {
+  padding: 1.2rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+}
+
+.btn.sm {
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.btn.sm:hover {
+  background: var(--color-gray-100);
+}
+
+/* card */
+.card {
+  background: var(--color-gray-500);
+  border: 2px solid transparent;
   text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 0 3rem 0 3rem;
+  transition: var(--transition);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card:hover {
+  background: transparent;
+  border-color: var(--color-gray-400);
+  cursor: default;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card span {
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-primary);
+  color: var(--color-gray-100);
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.5rem;
+  margin-inline: auto;
+  border-radius: 1rem;
+  transition: var(--transition);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card:hover span {
+  background: var(--color-secondary);
+  color: var(--color-gray-600);
+}
+
+.card small {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 300;
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  position: fixed;
+  background: var(--color-primary);
+  z-index: 99;
+}
+
+.nav {
+  padding: 8px;
+  border-bottom: 2mm ridge rgba(97, 223, 248, 0.3);
+  height: 80px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.nav__title {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav__menus {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav__menus a {
+  transition: var(--transition);
+}
+
+.nav__menus a:hover {
+  color: var(--color-secondary);
+}
+
+.nav__menus li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  box-shadow: -2rem 2rem 5rem rgba(97, 223, 248, 0.3);
+}
+
+.show__nav {
+  display: flex;
+}
+
+.hide__nav {
+  display: none;
+}
+
+.contents {
+  position: relative;
+  top: 80px;
+  height: 500px;
+}
+
+/* home */
+.home {
+  height: 100%;
+  background: var(--color-primary);
+}
+
+.medal img {
+  border: 2px solid var(--color-secondary);
+  border-radius: 50%;
+}
+
+.medal {
+  position: relative;
+  top: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+}
+
+.medal .front,
+.medal .back {
+  position: absolute;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.medal .front {
+  transform: rotateY(0deg);
+}
+
+.medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+.medal .back {
+  transform: rotateY(-180deg);
+}
+
+.medal:hover .back {
+  transform: rotateY(0deg);
+}
+
+/* footer */
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 2mm ridge rgba(97, 223, 248, 0.3);
+  padding: 40px 0 40px 0;
+  background: var(--color-primary);
+  /* border-top: 1px solid #333; */
+  display: flex;
+  justify-content: center;
 }
