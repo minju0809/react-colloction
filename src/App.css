@@ -18,22 +18,41 @@
   --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
   --color-secondary: #f7d48c;
   --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
-  --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
   --color-gray-300: hsl(var(--gray-hue), 24%, 64%);
-  --color-gray-400: hsl(var(--gray-hue), 16%, 41%);
   --color-gray-500: hsl(var(--gray-hue), 44%, 25%);
-  --color-gray-600: hsl(var(--gray-hue), 48%, 15%);
+
+  --color-primary: #00e5ff;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #6effff;
+  --color-dark-variant: #677483;
 
   --container-width-lg: 80%;
   --container-width-md: 90%;
 
   --transition: all 500ms ease;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark_theme_variables {
+  --color-btn: #15171c;
+  --color-primary: #353942;
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
 /* btn */
 .btn {
   cursor: pointer;
-  color: var(--color-gray-500);
+  color: var(--color-dark);
   width: fit-content;
   margin: 0 auto;
   padding: 0.9rem 2rem;
@@ -47,7 +66,7 @@
 
 .btn:hover {
   background: var(--color-secondary);
-  color: var(--color-gray-600);
+  color: var(--color-dark);
 }
 
 .btn.lg {
@@ -109,15 +128,17 @@
 
 /* Navbar */
 nav {
+  color: var(--color-dark);
   width: 100%;
   position: fixed;
-  background: var(--color-primary);
+  background: var(--color-white);
+  box-shadow: 0 1rem 1rem var(--color-light);
   z-index: 99;
 }
 
 .nav {
   padding: 8px;
-  border-bottom: 2mm ridge rgba(97, 223, 248, 0.3);
+  /* border-bottom: 1mm ridge rgba(97, 223, 248, 0.3); */
   height: 80px;
   display: flex;
   align-items: center;
@@ -125,8 +146,8 @@ nav {
 }
 
 .nav__title {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .nav__menus {
@@ -139,11 +160,13 @@ nav {
 }
 
 .nav__menus a {
+  color: var(--color-dark);
   transition: var(--transition);
 }
 
 .nav__menus a:hover {
   color: var(--color-secondary);
+  
 }
 
 .nav__menus li {
@@ -171,8 +194,9 @@ nav {
 
 /* home */
 .home {
-  height: 100%;
-  background: var(--color-primary);
+  color: var(--color-dark);
+  height: 100vh;
+  background: var(--color-background);
 }
 
 .medal img {
@@ -219,8 +243,7 @@ footer {
   bottom: 0;
   border-top: 2mm ridge rgba(97, 223, 248, 0.3);
   padding: 40px 0 40px 0;
-  background: var(--color-primary);
-  /* border-top: 1px solid #333; */
+  background: var(--color-background);
   display: flex;
   justify-content: center;
 }
