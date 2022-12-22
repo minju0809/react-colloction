@@ -1,6 +1,6 @@
 const Page1 = (props) => {
   return (
-    <div className="page1">
+    <div className="findGym">
       <div>1페이지</div>
       {/* <button
         onClick={() => {

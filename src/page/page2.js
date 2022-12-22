@@ -3,7 +3,7 @@ const Page2 = ({ setPage }) => {
     <div>
       <div>2페이지</div>
       <button onClick={() => setPage(0)}>홈으로</button>
-      <button onClick={() => setPage(1)}>1페이지</button>
+      <button onClick={() => setPage(1)}>체육관 찾기</button>
     </div>
   );
 };

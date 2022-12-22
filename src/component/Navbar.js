@@ -39,13 +39,13 @@ const Navbar = () => {
         </div>
         <ul className={`nav__menus ${isNavshowing ? "show__nav" : "hide__nav"}`}>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? "active-nav" : "")} onClick={() => setIsNavShowing((prev) => !prev)}>
+            <NavLink to="/" className={isActive ? "active-nav" : ""} onClick={() => setIsNavShowing((prev) => !prev)}>
               HOME
             </NavLink>
           </li>
           <li>
-            <NavLink to="/page1" className={({ isActive }) => (isActive ? "active-nav" : "")} onClick={() => setIsNavShowing((prev) => !prev)}>
-              PAGE1
+            <NavLink to="/findGym" className={({ isActive }) => (isActive ? "active-nav" : "")} onClick={() => setIsNavShowing((prev) => !prev)}>
+              FindGym
             </NavLink>
           </li>
           <li>
