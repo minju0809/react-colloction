@@ -1,6 +1,6 @@
 import Navbar from "./component/Navbar";
 import Home from "./page/Home";
-import FindGym from "./page/findGym";
+import FindGym from "./page/FindGym";
 import Page2 from "./page/page2";
 import Footer from "../src/component/Footer";
 import "./App.css";

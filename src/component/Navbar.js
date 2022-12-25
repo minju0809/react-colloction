@@ -32,7 +32,7 @@ const Navbar = ({ setPage }) => {
             React_Collection
           </div>
           <div className="modeChange__toggle" onClick={() => ModeChange()}>
-            {toggle ? <DarkModeIcon /> : <LightModeIcon />}
+            {toggle ? <LightModeIcon /> : <DarkModeIcon />}
           </div>
 
           <Avatar sx={{ bgcolor: "#673ab7" }}>K</Avatar>
