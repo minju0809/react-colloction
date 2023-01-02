@@ -1,10 +1,10 @@
 import Navbar from "./component/Navbar";
 import Home from "./page/Home";
 import FindGym from "./page/FindGym";
-import Page2 from "./page/page2";
-import Footer from "../src/component/Footer";
-import "./App.css";
+import TodoList from "./page/TodoList";
+import Footer from "./component/Footer";
 import { useState } from "react";
+import "./App.css";
 
 function App() {
   const [page, setPage] = useState(0);
@@ -14,9 +14,9 @@ function App() {
       <div className="contents">
         {page === 0 && <Home />}
         {page === 1 && <FindGym />}
-        {page === 2 && <Page2 />}
+        {page === 2 && <TodoList setPage={setPage} />}
       </div>
-      <Footer className="footer" />
+      {/* <Footer className="footer" /> */}
     </>
   );
 }

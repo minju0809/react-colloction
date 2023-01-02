@@ -15,16 +15,12 @@
   --primary-hue: 180;
   --color-primary: hsl(var(--primary-hue), 100%, 98%);
   /* --color-primary: #00e5ff; */
-  --color-primary-variant: hsl(var(--primary-hue), 100%, 65%);
   --color-secondary: #f7d48c;
-  
   --color-white: #fff;
   --color-light: rgba(132, 139, 200, 0.18);
   --color-dark: #363949;
-  --color-dark-variant: #677483;
 
   --transition: all 500ms ease;
-
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
@@ -35,7 +31,6 @@
   --color-white: #202528;
   --color-light: rgba(0, 0, 0, 0.4);
   --color-dark: #edeffd;
-  --color-dark-variant: #a3bdcc;
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
@@ -44,69 +39,31 @@
   cursor: pointer;
   color: var(--color-dark);
   width: fit-content;
-  margin: 0 auto;
-  padding: 0.9rem 2rem;
+  margin: .25rem;
+  padding: .2rem .4rem;
   background: var(--color-primary);
-  border-radius: 1.2rem;
+  border-radius: .8rem;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   transition: var(--transition);
   border: 2px solid #f7d48c;
 }
-
 .btn:hover {
   background: var(--color-secondary);
-}
-
-/* card */
-.card {
-  background: var(--color-primary);
-  border: 2px solid transparent;
-  text-align: center;
-  padding: 3rem 2rem;
-  border-radius: 0 3rem 0 3rem;
-  transition: var(--transition);
-}
-
-.card:hover {
-  background: transparent;
-  border-color: var(--color-primary);
-  cursor: default;
-}
-
-.card span {
-  width: 3rem;
-  height: 3rem;
-  background: var(--color-primary);
-  color: var(--color-dark);
-  font-size: 1.5rem;
-  padding: 0.8rem;
-  display: grid;
-  place-items: center;
-  margin-bottom: 1.5rem;
-  margin-inline: auto;
-  border-radius: 1rem;
-  transition: var(--transition);
-}
-
-.card:hover span {
-  background: var(--color-secondary);
-  color: var(--color-dark);
 }
 
 /* Navbar */
 nav {
   color: var(--color-dark);
   width: 100%;
+  z-index: 99;
   position: fixed;
   background: var(--color-white);
   box-shadow: 0 1rem 1rem var(--color-light);
-  z-index: 99;
 }
 
 .nav {
   padding: 8px;
-  /* border-bottom: 2px solid #f7d48c; */
   height: 80px;
   display: flex;
   align-items: center;
@@ -119,7 +76,6 @@ nav {
 
 .nav__menus {
   cursor: pointer;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -163,18 +119,22 @@ nav {
 /* home */
 .home {
   color: var(--color-dark);
-  height: 100vh;
   background: var(--color-background);
+  height: 100vh;
 }
 
 .medal img {
+  width: 8rem;
   border: 2px solid var(--color-secondary);
   border-radius: 50%;
 }
 
 .medal {
-  position: relative;
-  top: 30%;
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 1px;
+  right: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,8 +164,14 @@ nav {
   transform: rotateY(0deg);
 }
 
+.todoList {
+  padding: 4px;
+}
+
 /* findGym */
 .findGym {
+  color: var(--color-dark);
+  background: var(--color-background);
   height: 500px;
 }
 
@@ -225,3 +191,39 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+/* card */
+/* .card {
+  background: var(--color-primary);
+  border: 2px solid transparent;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 0 3rem 0 3rem;
+  transition: var(--transition);
+}
+
+.card:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  cursor: default;
+}
+
+.card span {
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.5rem;
+  margin-inline: auto;
+  border-radius: 1rem;
+  transition: var(--transition);
+}
+
+.card:hover span {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+} */
