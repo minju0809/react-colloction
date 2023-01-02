@@ -1,26 +1,31 @@
 import { useState } from "react";
 import gymList from "../component/json/GymData";
 
-const FindGym = () => {
-  const [page, setPage] = useState(0);
+const FindGym = ({ setPage }) => {
+  const [chapter, setChapter] = useState(0);
   const [searchResult, setSearchResult] = useState([]);
   const [value, setValue] = useState("");
   console.log(gymList);
 
   return (
     <div className="findGym">
-      {page === 0 && (
+      {chapter === 0 && (
         <>
+          <button className="btn" onClick={() => setPage(0)}>
+            Home
+          </button>
           <button
+            className="btn"
             onClick={() => {
-              setPage(1);
+              setChapter(1);
             }}
           >
             모든 체육관
           </button>
           <button
+            className="btn"
             onClick={() => {
-              setPage(2);
+              setChapter(2);
             }}
           >
             체육관 검색
@@ -28,42 +33,64 @@ const FindGym = () => {
         </>
       )}
 
-      {page === 1 && (
+      {chapter === 1 && (
         <>
           <button
+            className="btn"
             onClick={() => {
-              setPage(0);
+              setChapter(0);
             }}
           >
             이전으로
           </button>
           <ul className="gymAll">
             {gymList.map((gym, id) => (
-              <li key={id} className="gymLink" onClick={() => window.open(gym.link)}>
+              <li
+                key={id}
+                className="gymLink"
+                onClick={() => window.open(gym.link)}
+              >
                 {gym.name}
               </li>
             ))}
           </ul>
         </>
       )}
-      {page === 2 && (
+      {chapter === 2 && (
         <>
           <button
+            className="btn"
             onClick={() => {
-              setPage(0);
+              setChapter(0);
             }}
           >
             이전으로
           </button>
-          <input value={value} onChange={(e) => setValue(e.target.value)} placeholder="체육관 이름을 입력해주세요."></input>
+          <input
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="체육관 이름을 입력해주세요."
+          ></input>
           <button
+            className="btn"
             onClick={() => {
-              setSearchResult(gymList.filter((gym) => gym.name.includes(value)));
+              setSearchResult(
+                gymList.filter((gym) => gym.name.includes(value))
+              );
             }}
           >
             검색
           </button>
-          {searchResult.length > 0 && searchResult.map((result, idx) => <div className="gymLink" key={idx} onClick={() => window.open(result.link)}>{result.name}</div>)}
+          {searchResult.length > 0 &&
+            searchResult.map((result, idx) => (
+              <div
+                className="gymLink"
+                key={idx}
+                onClick={() => window.open(result.link)}
+              >
+                {result.name}
+              </div>
+            ))}
         </>
       )}
     </div>

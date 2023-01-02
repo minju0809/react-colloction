@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const TodoList = () => {
+const TodoList = ({setPage}) => {
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
 
@@ -34,6 +34,7 @@ const TodoList = () => {
 
   return (
     <div className="todoList">
+      <button className="btn" onClick={() => setPage(0)}>Home</button>
       <h2>To do List</h2>
       <input
         value={todo}

@@ -3,10 +3,10 @@ import MedalImageFront from "../images/developer.png";
 import MedalImageBack from "../images/badminton.png";
 import TodoList from "./TodoList";
 
-const Home = () => {
+const Home = ({setPage}) => {
   return (
     <div className="home">
-      <TodoList />
+      <TodoList setPage={setPage}/>
       <div className="medal">
         <div className="front">
           <img src={MedalImageFront} alt="개발" />

@@ -165,7 +165,10 @@ nav {
 }
 
 .todoList {
+  color: var(--color-dark);
+  background: var(--color-background);
   padding: 4px;
+  height: 500px;
 }
 
 /* findGym */
