@@ -17,9 +17,9 @@ const TodoList = ({setPage}) => {
     });
     setTodo("");
   };
-  const handleDelete = (index) => {
+  const handleDelete = (i) => {
     setTodos((prev) => {
-      const newTodos = prev.filter((prev, idx) => idx !== index);
+      const newTodos = prev.filter((prev, idx) => idx !== i);
       localStorage.setItem("todos", JSON.stringify(newTodos));
       return newTodos;
     });
