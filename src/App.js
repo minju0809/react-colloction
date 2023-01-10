@@ -5,6 +5,7 @@ import TodoList from "./page/TodoList";
 import Footer from "./component/Footer";
 import { useState } from "react";
 import "./App.css";
+import FindMovie from "./page/FindMovie";
 
 function App() {
   const [page, setPage] = useState(0);
@@ -14,7 +15,8 @@ function App() {
       <div className="contents">
         {page === 0 && <Home setPage={setPage} />}
         {page === 1 && <FindGym setPage={setPage} />}
-        {page === 2 && <TodoList setPage={setPage} />}
+        {page === 2 && <FindMovie setPage={setPage} />}
+        {page === 3 && <TodoList setPage={setPage} />}
       </div>
       <Footer className="footer" />
     </>

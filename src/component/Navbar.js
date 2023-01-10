@@ -40,7 +40,8 @@ const Navbar = ({ setPage }) => {
         <ul className={`nav__menus ${isNavshowing ? "show__nav" : "hide__nav"}`}>
           <li onClick={() => changePage(0)}>HOME</li>
           <li onClick={() => changePage(1)}>FindGym</li>
-          <li onClick={() => changePage(2)}>TodoList</li>
+          <li onClick={() => changePage(2)}>FindMovie</li>
+          <li onClick={() => changePage(3)}>TodoList</li>
         </ul>
       </div>
     </nav>

@@ -172,15 +172,18 @@ nav {
 }
 
 /* findGym */
-.findGym {
+.findGym,
+.findMovie {
   color: var(--color-dark);
   background: var(--color-background);
   height: 500px;
 }
 
-.gymLink {
+.gymLink,
+.movieLink {
   cursor: pointer;
 }
+
 
 /* footer */
 .footer {

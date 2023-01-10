@@ -31,12 +31,12 @@ const FindGym = ({ setPage }) => {
       <div>
         {searchResult.length > 0
           ? searchResult.map((result, id) => (
-              <div key={id} onClick={() => window.open(result.link)}>
+              <div className="gymLink" key={id} onClick={() => window.open(result.link)}>
                 {result.name}
               </div>
             ))
           : gymList.map((gym, id) => (
-              <div key={id} onClick={() => window.open(gym.link)}>
+              <div className="gymLink" key={id} onClick={() => window.open(gym.link)}>
                 {gym.name}
               </div>
             ))}
