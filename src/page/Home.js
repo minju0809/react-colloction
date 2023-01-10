@@ -6,7 +6,7 @@ import TodoList from "./TodoList";
 const Home = ({setPage}) => {
   return (
     <div className="home">
-      <TodoList setPage={setPage}/>
+      <TodoList setPage={setPage} />
       <div className="medal">
         <div className="front">
           <img src={MedalImageFront} alt="개발" />

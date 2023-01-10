@@ -35,6 +35,7 @@ const TodoList = ({setPage}) => {
   return (
     <div className="todoList">
       <button className="btn" onClick={() => setPage(0)}>Home</button>
+      <button className="btn" onClick={() => setPage(1)}>FindGym</button>
       <h2>To do List</h2>
       <input
         value={todo}
