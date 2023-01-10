@@ -179,11 +179,9 @@ nav {
   height: 500px;
 }
 
-.gymLink,
-.movieLink {
+.result {
   cursor: pointer;
 }
-
 
 /* footer */
 .footer {

@@ -29,15 +29,23 @@ const FindMovie = ({ setPage }) => {
       <button className="btn" onClick={handleAdd}>
         검색
       </button>
-      <div className="movieLink">
+      <div>
         {searchMovies.length > 0
           ? searchMovies.map((movie, id) => (
-              <div key={id} onClick={() => window.open(movie.link)}>
+              <div
+                className="result"
+                key={id}
+                onClick={() => window.open(movie.link)}
+              >
                 {movie.name}
               </div>
             ))
           : movieList.map((movie, id) => (
-              <div key={id} onClick={() => window.open(movie.link)}>
+              <div
+                className="result"
+                key={id}
+                onClick={() => window.open(movie.link)}
+              >
                 {movie.name}
               </div>
             ))}
