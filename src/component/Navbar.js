@@ -42,6 +42,7 @@ const Navbar = ({ setPage }) => {
           <li onClick={() => changePage(1)}>FindGym</li>
           <li onClick={() => changePage(2)}>FindMovie</li>
           <li onClick={() => changePage(3)}>TodoList</li>
+          <li onClick={() => changePage(4)}>SelectMovie</li>
         </ul>
       </div>
     </nav>

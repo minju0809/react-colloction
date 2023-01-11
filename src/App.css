@@ -173,7 +173,8 @@ nav {
 
 /* findGym */
 .findGym,
-.findMovie {
+.findMovie,
+.selectMovie {
   color: var(--color-dark);
   background: var(--color-background);
   height: 500px;
